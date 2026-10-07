@@ -1,175 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div class="card">
+            <div style="box-shadow: black 10px 6px 10px; width: 200px; height: 200px; border-radius: 50%; justify-self: center;">
+                <img src="https://i.pinimg.com/736x/8f/85/4e/8f854e4b78ecc4c356b0ae6f940e796d.jpg" alt="profile img" class="profile-img">
+            </div>
+            <h2>תומר חמצוב</h2>
+            <p class="title">anime ig..</p>
+            <p class="qoute">im not gonna survive</p>
+            <a href="#" class="whatsapp-btn">This button is a lie</a>
 
 
-<head>
-	<title>Website Template | Simple Single-Page | Html | Css | Home Page</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta charset="utf-8" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+        </div>
+        <script>
+            function getAngleDegrees(pointX, pointY, centerX, centerY) {
+                const deltaX = pointX - centerX;
+                const deltaY = pointY - centerY;
 
+                const angleRadians = Math.atan2(deltaY, deltaX);
 
-<body>
-    <div class="box">
+                let angleDegrees = angleRadians * 180 / Math.PI;
 
+                if (angleDegrees < 0) {
+                    angleDegrees += 360;
+                }
 
-	<div class="row content">
-		<div class="content-text">
-			<h1>This is a single-page html/css website template hosted on github.</h1>
-			<hr>
-			<h2>Heading (h2)</h2>
-			<p>Place your text here, place your text here, place your text here, place your text here, 
-			place your text here, place your text here, place your text here, place your text here, 
-			place your text here, place your text here, place your text here, place your text here, 
-			place your text here, place your text here, place your text here, place your text here, 
-			place your text here, place your text here, place your text here, place your text here,
-			place your text here, <i>place your text here, </i>place your text here, <i>place your text here.</i></p>
-			<br />
+                return angleDegrees;
+            }
+            document.addEventListener('mousemove', function(event) {
+                const xCoord = event.clientX;
+                const yCoord = event.clientY;
+                const width = document.body.clientWidth;
+                const height = document.body.clientHeight;
+                let img = document.querySelector(".profile-img");
+                img.style.cssText += `transform: rotateZ(${getAngleDegrees(xCoord, yCoord, width/2, height/2-80)}deg);`;
+                
+            });
+        </script>
+    </body>
 
-			<h3>Heading (h3)</h3>
-			<p>Sample medium-sized text.</p>
-			<br />
-
-			<h3>Heading (h3)</h3>
-			<p>Place your text here.</p>
-			<br />
-		
-			<h3>Downloads:</h3>
-			<p>Files included:</p>
-			<ul>
-				<li>test-file-1.txt</li>
-				<li>test-file-2.txt</li>
-				<li>test-file-3.txt</li>
-
-			<br />
-			
-			<div class="download-button">
-				<a href="downloads/website-template-simple-single-page-v1.zip" download style="color:white; text-decoration:none">
-				<span>Download &nbsp;&nbsp;&nbsp;&nbsp;</span>
-				<img style="vertical-align:middle" src="images/download-icon-1.png" alt="image" height="25">
-				</a>
-			</div>
-			</ul>
-
-			<br />
-
-			<hr> <!-- this makes a line -->
-
-			<br />
-
-
- 	      		<div class="float-right">
-				<content-image>
-				<a href="images/test-image-1.jpg">
-				<img src="images/test-image-1.jpg" width="300" />
-				<br /><br />test-image-1 (float-right)</a>
-				</content-image>
-			</div>
-
-
-			<p class="content-text-no-line-space">
-			<a href="images/test-image-1.jpg">
-			List Link 1. (test-image-1)</a></p>
-
-			<p class="content-text-no-line-space">
-			<a href="images/test-image-2.jpg">
-			List Link 2. (test-image-2)</a></p>
-
-			<p class="content-text-no-line-space">
-			<a href="images/test-image-3.jpg">
-			List Link 3. (test-image-3)</a></p>
-
-
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
- 			<br />
-			<br />
-			<br />
-			<br />
- 			<br />
-
-
- 	     		<div>
-				<content-image>
-				<a href="images/test-image-2.jpg">
-			        <img src="images/test-image-2.jpg" width="500" />
-				<br /><br />test-image-2 (text-aligned)</a>
-				</content-image>
-			</div>
-
-
-	       		<div class="center">
-				<content-image>
-				<a href="images/test-image-2.jpg">
-			        <img src="images/test-image-2.jpg" width="500" />
-				<br /><br />test-image-2 (centered)</a>
-				</content-image>
-			</div>
-
-
-	       		<div class="align-right">
-				<content-image>
-				<a href="images/test-image-2.jpg">
-			        <img src="images/test-image-2.jpg" width="500" />
-				<br /><br />test-image-2 (align-right)</a>
-				</content-image>
-			</div>
-
-
- 	      		<div class="center">
-				<content-image-spaced>
-				<a href="images/test-image-3.jpg">
-			        <img src="images/test-image-3.jpg" width="400" />
-				<br /><br />test-image-3 (centered grid)</a>
-				</content-image-spaced>
-
-				<content-image-spaced>
-				<a href="images/test-image-3.jpg">
-				<img src="images/test-image-3.jpg" width="400" />
-				<br /><br />test-image-3 (centered grid)</a>
-				</content-image-spaced>
-
-				<content-image-spaced>
-				<a href="images/test-image-3.jpg">
-				<img src="images/test-image-3.jpg" width="400" />
-				<br /><br />test-image-3 (centered grid)</a>
-				</content-image-spaced>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="row footer">
-       		<div class="footer">
-			<p>Copyright © your copyright here. No Rights Reserved.</p>
-		</div>
-	</div>
-
-
-    </div> <!-- end box -->
-</body>
 </html>
+
+<!-- .my-element {
+  transform: rotateX(30deg) rotateY(45deg); 850
+} -->
